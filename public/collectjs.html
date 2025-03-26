@@ -1,0 +1,81 @@
+<script 
+    src="https://secure.nmi.com/token/Collect.js" 
+    data-tokenization-key="sZQDUz-6AaF6c-Ppee8V-39Ctng" 
+    data-variant="inline"></script>
+    <!-- src="https://secure.networkmerchants.com/token/Collect.js"  -->
+
+<body>
+    <h1>CollectJS Payment Form</h1>
+        <form action="/your-page.php" method="post">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input size="30" type="text" name="fname" value="Test" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input size="30" type="text" name="lname" value="User" /></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input size="30" type="text" name="address" value="123 Main Street"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input size="30" type="text" name="city" value="Beverley Hills"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input size="30" type="text" name="state" value="CA"></td>
+                </tr>
+                <tr>
+                    <td>Zip</td>
+                    <td><input size="30" type="text" name="zip" value="90210"></td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td><input size="30" type="text" name="country" value="US"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input size="30" type="text" name="phone" value="5555555555"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Credit Card Information
+                    </td>
+                </tr>
+                <tr>
+                    <td>CC Number</td>
+                    <td id="ccnumber"></td>
+                </tr>
+                <tr>
+                    <td>CC Exp</td>
+                    <td id="ccexp"></td>
+                </tr>
+                <tr>
+                    <td>CVV</td>
+                    <td id="cvv"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Electronic Check Information
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account Number</td>
+                    <td id="checkaccount"></td>
+                </tr>
+                <tr>
+                    <td>Routing Number</td>
+                    <td id="checkaba"></td>
+                </tr>
+                <tr>
+                    <td>Account Owner's Name</td>
+                    <td id="checkname"></td>
+                </tr>
+            </table>
+            <br>
+            <button id="payButton" type="button">Submit Payment</button>
+        </form>
+</body>
