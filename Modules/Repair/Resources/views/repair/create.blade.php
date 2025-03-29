@@ -7,6 +7,9 @@
 	.krajee-default.file-preview-frame .kv-file-content {
 		height: 65px;
 	}
+	.menu-icon{
+    background-color: #ff5a1f;
+  }
 </style>
 <!-- Content Header (Page header) -->
 <section class="content-header">

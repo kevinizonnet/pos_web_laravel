@@ -1,23 +1,37 @@
 @extends('layouts.auth2')
+
 @section('title', __('lang_v1.register'))
 
 @section('content')
+<style>
+    .form-group {
+        margin-bottom: 20px;
+        
+    }
+</style>
 <div class="login-form col-md-12 col-xs-12 right-col-content-register">
-    
-    <p class="form-header" style="color:#6c757d;">@lang('business.register_and_get_started_in_minutes')</p>
-    {!! Form::open(['url' => route('business.postRegister'), 'method' => 'post', 
-                            'id' => 'business_register_form','files' => true ]) !!}
+    <p class="form-header text-muted">
+        @lang('business.register_and_get_started_in_minutes')
+    </p>
+
+    {!! Form::open([
+        'url' => route('business.postRegister'), 
+        'method' => 'post', 
+        'id' => 'business_register_form', 
+        'files' => true 
+    ]) !!}
         @include('business.partials.register_form')
-        {!! Form::hidden('package_id', $package_id); !!}
+        {!! Form::hidden('package_id', $package_id) !!}
     {!! Form::close() !!}
 </div>
-@stop
+@endsection
+
 @section('javascript')
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#change_lang').change( function(){
-            window.location = "{{ route('business.getRegister') }}?lang=" + $(this).val();
+<script>
+    $(document).ready(function () {
+        $('#change_lang').on('change', function () {
+            window.location.href = "{{ route('business.getRegister') }}?lang=" + $(this).val();
         });
-    })
+    });
 </script>
 @endsection

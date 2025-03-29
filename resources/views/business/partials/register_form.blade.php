@@ -1,7 +1,7 @@
 @if(empty($is_admin))
     <h3>@lang('business.business')</h3>
 @endif
-{!! Form::hidden('language', request()->lang); !!}
+{!! Form::hidden('language', request()->lang) !!}
 
 <fieldset>
 <legend>@lang('business.business_details'):</legend>
